@@ -88,6 +88,10 @@ if (!isset($_SESSION['logged_in'])){
             </tr>
             <?php } ?>
          </table>
+         <div class="buttons">
+         <a href ="index.html" class="btn btn-success" >Add more photos</a>
+         <a href ="logout.php" class="btn btn-primary" >Logout</a>
+         </div>
       </div>
    </div>
 </body>
