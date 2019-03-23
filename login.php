@@ -19,7 +19,7 @@ if (isset($_SESSION['logged_in'])){
    <body> 
    <div class="container">
           <div class="row justify-content-center">
-            <form class="form-group" action="show.php" method="POST">
+            <form class="form-group login-form" action="show.php" method="POST">
                 Login: <br/> <input class="form-control" type="text" name="login"> <br/>
                 Hasło: <br/> <input class="form-control" type="password" name="haslo"><br/><br/>
                   <?php             
@@ -28,7 +28,8 @@ if (isset($_SESSION['logged_in'])){
                       };
                       unset ($_SESSION['bad_attempt']);
               ?>
-                <input class="form-control" type="submit" value="zaloguj sie">
+                <input class="form-control buttons" type="submit" value="zaloguj sie">
+                <a href ="index.html" class="form-control btn btn-success add-button" >Add more photos</a>
                 
             </form>
            
