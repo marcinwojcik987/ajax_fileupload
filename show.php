@@ -83,7 +83,7 @@ if (!isset($_SESSION['logged_in'])){
                <td><?php echo $row['name'] ?></td>
                <td><?php echo $row['email'] ?></td>
                <td>
-                  <a href="<?php echo "uploads/" . $row['file_name'] ?>">Image</a>
+                  <a href="<?php echo "uploads/" . $row['file_name'] ?>" target="_blank">Image</a>
                </td>
             </tr>
             <?php } ?>
@@ -91,6 +91,7 @@ if (!isset($_SESSION['logged_in'])){
          <div class="buttons">
          <a href ="index.html" class="btn btn-success" >Add more photos</a>
          <a href ="logout.php" class="btn btn-primary" >Logout</a>
+         <a href ="gallery.php" class="btn btn-info" >Gallery</a>
          </div>
       </div>
    </div>
