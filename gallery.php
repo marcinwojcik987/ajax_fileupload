@@ -14,6 +14,8 @@ if (!isset($_SESSION['logged_in'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link href="dist\css\lightbox.css" rel="stylesheet">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Gallery</title>
 </head>
 <body>
@@ -25,47 +27,22 @@ $mysql = new mysqli('localhost', 'root', '', 'codexworld') or die(mysqli_error($
 $query = $mysql->query("SELECT * FROM form_data ORDER BY id ASC") or 
           die($mysql->error);
 
-
 if (! empty($query)) {
     while ($row = $query->fetch_assoc()) {
         ?> 
         <section>
-        <div class="image">           
-                <img id="myImg" onclick="onClick(this)" src="<?php echo "uploads/" . $row["file_name"] ; ?>" />
-                <div id="myModal" class="modal">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="img01">
-                <div id="caption"></div>
-                </div>            
-            </div>
-        </section> 
-            
+            <div class="image">
+            <a data-lightbox="roadtrip" href="<?php echo "uploads/" . $row["file_name"] ;  ?>"><img src="<?php echo "uploads/" . $row["file_name"] ;  ?>"></a>         
+            </div>        
+        </section>
+        
+ 
 <?php
     }
 }
 ?>
 </div>
-<script>
-// Get the modal
-var modal = document.getElementById('myModal');
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
-}
-</script>    
+<script src="dist\js\lightbox.js"></script>
 </body>
 </html>
