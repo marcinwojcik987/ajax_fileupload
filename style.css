@@ -98,5 +98,12 @@
      }
  }
 
+ @media screen and (max-width: 845px)  {
+     div.image img{
+         width: 300px;
+         height: 300px;
+     }
+ }
+
 
  
