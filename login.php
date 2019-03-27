@@ -9,6 +9,7 @@ if (isset($_SESSION['logged_in'])){
 <html>
    <head lang="en">
       <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width" />
       <title>AJAX file upload</title>
       <link rel="stylesheet" href="style.css" type="text/css" />
       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>

@@ -3,6 +3,7 @@
 <html>
    <head lang="en">
       <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width" />
       <title>AJAX file upload</title>
       <link rel="stylesheet" href="style.css" type="text/css" />
       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -16,7 +17,7 @@
         <form enctype="multipart/form-data" id="fupForm" >
         <div class="form-group">
             <label for="name">NAME</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" pattern="[a-zA-Z0-9-]+" required />
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" pattern="[a-zA-Z0-9-]+" title="Dopuszczalne jedynie znaki alfanumeryczne." required />
         </div>
         <div class="form-group">
           <label for="email">EMAIL</label>
